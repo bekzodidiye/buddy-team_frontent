@@ -1,0 +1,105 @@
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0c;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Form Elements Reset */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+option {
+    background-color: #1a1a1e !important;
+    color: white !important;
+    padding: 12px;
+}
+
+select {
+    color-scheme: dark;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.buddy-glow {
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.15);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes loading {
+    0% { width: 0%; transform: translateX(-100%); }
+    50% { width: 50%; transform: translateX(50%); }
+    100% { width: 0%; transform: translateX(200%); }
+}
+
+.loading-bar {
+    animation: loading 2s ease-in-out infinite;
+}
+
+/* Scrollbar - Premium Slim Design & Fix for Double Scroll */
+::-webkit-scrollbar { 
+    width: 6px; 
+    height: 6px;
+}
+::-webkit-scrollbar-track { 
+    background: transparent; /* Track butunlay shaffof */
+}
+::-webkit-scrollbar-thumb { 
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { 
+    background: #4f46e5; 
+}
+
+/* Modal specific scrolling fixes to avoid double vertical lines */
+.overflow-y-auto {
+    scrollbar-gutter: stable both-edges;
+}
+
+/* Component Specific */
+.nav-scrolled {
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 0 !important;
+}
+
+/* Hide horizontal scroll for inner content unless strictly necessary */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+    scrollbar-width: thin;
+}

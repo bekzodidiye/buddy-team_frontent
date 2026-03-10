@@ -1,0 +1,1 @@
+// React ilovasi ishga tushirilganligi sababli ushbu fayl bo'shatildi.
